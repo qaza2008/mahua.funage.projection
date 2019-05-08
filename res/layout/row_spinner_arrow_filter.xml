@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinner_tv"
+    style="@style/Font_ReportTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:drawableRight="@drawable/xiangxia"
+    android:gravity="center_vertical"
+    android:paddingLeft="60dp"
+    android:textColor="#848484"
+    android:drawablePadding="5dp"
+    android:textSize="16sp"
+    android:singleLine="true" />

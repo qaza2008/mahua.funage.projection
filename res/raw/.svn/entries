@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="71"
+   name=""
+   committed-date="2013-10-31T07:04:55.296875Z"
+   url="https://pc-201102141651/svn/android_project/Authentication/trunk/Authentication/res/raw"
+   last-author="wanghengwei"
+   kind="dir"
+   repos="https://pc-201102141651/svn/android_project"
+   revision="104"/>
+<entry
+   committed-rev="71"
+   name="ok.wav"
+   text-time="2013-08-08T07:24:56.000000Z"
+   committed-date="2013-10-31T07:04:55.296875Z"
+   checksum="5cf04f679c5a1aeff60fe2af0f4ce06e"
+   last-author="wanghengwei"
+   kind="file"
+   prop-time="2013-10-31T07:09:50.000000Z"/>
+</wc-entries>

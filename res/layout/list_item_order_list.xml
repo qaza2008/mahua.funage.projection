@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_background"
+        android:orientation="vertical"
+        android:paddingTop="3dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_drama_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:drawableLeft="@drawable/time_02"
+            android:drawablePadding="5dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="2dp"
+            android:text="2015年01月18日 星期日 上午10:00"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- 剧院地址  /名称 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="middle"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:singleLine="true"
+                android:text="中关村-海淀剧社"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+        <!-- 姓名 电话 -->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:text="订票电话"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:text="13456789011"
+                android:textColor="@color/gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_drama_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:text="测试演出"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+</LinearLayout>

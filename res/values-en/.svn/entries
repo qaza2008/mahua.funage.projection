@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="90"
+   name=""
+   committed-date="2013-11-07T08:00:17.703125Z"
+   url="https://pc-201102141651/svn/android_project/CR30A/trunk/CR30A2.0/res/values-en"
+   last-author="wanghengwei"
+   kind="dir"
+   uuid="32046560-117a-9446-93b6-66767021adae"
+   repos="https://pc-201102141651/svn/android_project"
+   revision="91"/>
+<entry
+   committed-rev="104"
+   name="strings.xml"
+   text-time="2013-11-22T09:45:12.000000Z"
+   committed-date="2013-12-03T01:59:19.968750Z"
+   checksum="2976b813d9b258350a2fdeb1dbd75d05"
+   last-author="wanghengwei"
+   kind="file"
+   revision="104"/>
+</wc-entries>

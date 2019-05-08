@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="71"
+   name=""
+   committed-date="2013-10-31T07:04:55.296875Z"
+   url="https://pc-201102141651/svn/android_project/Authentication/trunk/Authentication/res/xml"
+   last-author="wanghengwei"
+   kind="dir"
+   repos="https://pc-201102141651/svn/android_project"
+   revision="104"/>
+<entry
+   committed-rev="71"
+   name="serial_port_preferences.xml"
+   text-time="2012-07-10T02:06:50.000000Z"
+   committed-date="2013-10-31T07:04:55.296875Z"
+   checksum="eed232c2ea68fb475ec7112fcac89c31"
+   last-author="wanghengwei"
+   kind="file"/>
+</wc-entries>

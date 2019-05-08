@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_yyy_bg" >
+
+    <ImageView
+        android:id="@+id/im_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/log650_180" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im_log"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="检票工具"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+    <!--
+    <EditText
+        android:id="@+id/et_name"
+        style="@style/Font_Login"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="300dp"
+        android:background="@drawable/shurukuang"
+        android:drawableLeft="@drawable/icon_yonghu"
+        android:drawablePadding="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="请输入账户"
+        android:paddingLeft="10dp" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/et_psd"
+        style="@style/Font_Login"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="230dp"
+        android:background="@drawable/shurukuang"
+        android:drawableLeft="@drawable/mima_icon"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="请输入密码"
+        android:paddingLeft="10dp"
+        android:password="true" >
+    </EditText>
+    -->
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/yuanxingkuang" >
+
+                <TextView
+                    style="@style/Font_ReportTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/spinner_city"
+                    android:textColor="@drawable/my_pro_name"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/spin_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="#00000000" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/yuanxingkuang" >
+
+                <TextView
+                    style="@style/Font_ReportTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/spinner_drama"
+                    android:textColor="@drawable/my_pro_name"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/spin_theater"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="#00000000" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/yuanxingkuang" >
+
+                <TextView
+                    style="@style/Font_ReportTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="@string/spinner_time"
+                    android:textColor="@drawable/my_pro_name"
+                    android:textStyle="normal" />
+
+                <Spinner
+                    android:id="@+id/spin_drama"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:background="#00000000" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_login"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/ll_main"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#f77056"
+        android:text="登录"
+        android:textColor="@color/whites"
+        android:textSize="20sp" />
+
+    <!--
+         <Button
+        android:id="@+id/bt_fresh"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/bt_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#f77056"
+        android:text="刷新"
+        android:textColor="@color/whites"
+        android:textSize="20sp" />
+    -->
+
+    <TextView
+        android:id="@+id/tv_padno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="设备编号:"
+        android:textColor="@color/gray" />
+    <TextView
+        android:id="@+id/tv_padvalidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_padno"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Copyright © 2015 开心麻花"
+        android:textColor="@color/gray" />
+
+</RelativeLayout>

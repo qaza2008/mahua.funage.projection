@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="103"
+   name=""
+   committed-date="2013-12-03T01:59:12.953125Z"
+   url="https://pc-201102141651/svn/android_project/Authentication/trunk/Authentication/src/android_serialport_api"
+   last-author="wanghengwei"
+   kind="dir"
+   uuid="32046560-117a-9446-93b6-66767021adae"
+   repos="https://pc-201102141651/svn/android_project"
+   revision="104"/>
+<entry
+   committed-rev="106"
+   name="SerialPortManager.java"
+   text-time="2013-12-04T09:02:38.000000Z"
+   committed-date="2013-12-05T01:42:04.453125Z"
+   checksum="9fe036e93d385a429820fe40ed35c898"
+   last-author="wanghengwei"
+   kind="file"
+   revision="106"/>
+<entry
+   committed-rev="95"
+   name="FingerprintAPI.java"
+   text-time="2013-11-22T08:15:20.000000Z"
+   committed-date="2013-11-22T08:32:14.687500Z"
+   checksum="61e3b07c49100edccd89eb587d7f4a85"
+   last-author="wanghengwei"
+   kind="file"/>
+<entry
+   committed-rev="106"
+   name="M1CardAPI.java"
+   text-time="2013-12-04T09:03:00.000000Z"
+   committed-date="2013-12-05T01:42:04.453125Z"
+   checksum="8a32b3b71be74ce648ebdaf3f3e33872"
+   last-author="wanghengwei"
+   kind="file"
+   schedule="delete"
+   revision="106"/>
+<entry
+   committed-rev="71"
+   name="SerialPort.java"
+   text-time="2012-07-10T02:06:50.000000Z"
+   committed-date="2013-10-31T07:04:55.296875Z"
+   checksum="07056d1e1d8ffb06f811cb2d1c25c37c"
+   last-author="wanghengwei"
+   kind="file"/>
+<entry
+   committed-rev="74"
+   name="TypeBCardAPI.java"
+   text-time="2013-10-31T07:13:48.000000Z"
+   committed-date="2013-10-31T07:10:15.359375Z"
+   checksum="1da2d8d0e92d0cfaf330b177154ec3c4"
+   last-author="wanghengwei"
+   kind="file"/>
+<entry
+   committed-rev="106"
+   name="ParseSFZAPI.java"
+   text-time="2013-12-04T09:08:26.000000Z"
+   committed-date="2013-12-05T01:42:04.453125Z"
+   checksum="afc2cd71647d709f66727417470e8ffb"
+   last-author="wanghengwei"
+   kind="file"
+   revision="106"/>
+</wc-entries>

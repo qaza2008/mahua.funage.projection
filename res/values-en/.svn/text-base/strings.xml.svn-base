@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">Authentication</string>
+
+    <string name="open_serial_fail">Open the serial port fails!</string>
+    
+    <!-- main activity  -->
+    <string name="rfid">RFID</string>
+    <string name="pin">ID</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="stop_connect">Disconnect bluetooth</string>
+    <string name="exit_toast">Press again to exit the program</string>
+    <!-- sfz activity -->
+    <string name="read_sfz">Reader</string>
+    <string name="sequential_sfz">Continuous reader</string>
+    <string name="stop">Stop</string>
+    <string name="clear_sfz">Clear</string>
+    <string name="read_card_fail">Did not find a card</string>
+    <string name="read_card_success">Successful reader</string>
+
+    <!-- FingerprintActivity -->
+    <string name="print_finger">Please click fingerprints!</string>
+    <string name="print_finger_again">Press again fingerprint!</string>
+    <string name="processing">Processing ...</string>
+    <string name="generate_char_fail">Generate the feature value failed!</string>
+    <string name="reg_model_success">Template synthesis success!</string>
+    <string name="reg_model_fail">Synthetic template failed!</string>
+    <string name="register_success">Registered successfully!</string>
+    <string name="register_fail">Registration failed!</string>
+    <string name="verifying_wait">Validating, please wait ...</string>
+    <string name="down_char_fail">Download a template fails</string>
+    <string name="verifying_through">Verified through</string>
+    <string name="verifying_fail">Authentication failed</string>
+    
+    
+    
+    <!-- RFID -->
+    <string name="card_number">Card</string>
+    <string name="read_card">Reader</string>
+    <string name="write_card">Write cards</string>
+    <string name="write_password">Password:</string>
+    <string name="update_password">Change Password</string>
+    <string name="write_block_num">Write block number:</string>
+    <string name="write_data">Write Data:</string>
+    <string name="read_block_num">Read block number:</string>
+    <string name="read_data">Read data:</string>
+    <string name="writing_wait">Writing cards, please wait ...</string>
+    <string name="reading_wait">Being reader, please wait ...</string>
+    <string name="writing_success">Successful write cards</string>
+    <string name="writing_fail">Failed to write cards</string>
+    <string name="reading_success">Successful reader</string>
+    <string name="reading_fail">Reader fails</string>
+    <string name="card_to_area">Keep the card into a reader</string>
+    <string name="first_card">Please reader, and then verify the fingerprint!</string>
+    <string name="back">Back</string>
+    <string name="register_fingerprint">Registering fingerprints</string>
+    <string name="validate_fingerprint">Fingerprint verification</string>
+    <string name="first_register">Please register fingerprints!</string>
+    <string name="no_card_with_data">Did not find a card with return data</string>
+    <string name="no_card_without_data">Did not find a card with no return data, timeout! </string>
+    <string name="find_card_exception">May be other exceptions</string>
+    <string name="bluetooth_no_connect">Bluetooth is not connected!</string>
+    <string name="write_data_toast">Write data can not be empty</string>
+    <string name="write_toast">Write block number, the data can not be empty</string>
+    <string name="read_toast">When read in block number can not be empty</string>
+</resources>
