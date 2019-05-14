@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="条码检票"
+            android:text="身份证手动检票"
             android:textColor="@color/black"
             android:textSize="22sp" />
 
@@ -47,11 +47,11 @@
             android:onClick="Reflesh" >
 
             <Button
-                android:id="@+id/btn_flash"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:id="@+id/bindpro_btn2"
+                android:layout_width="30dp"
+                android:layout_height="33dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/ic_flash_off_scan"
+                android:background="@drawable/refresh"
                 android:onClick="Reflesh" />
         </RelativeLayout>
     </RelativeLayout>
@@ -61,16 +61,57 @@
         android:layout_height="match_parent"
         android:layout_below="@id/rl_mainbar" >
 
-        <SurfaceView
-            android:id="@+id/preview_view"
+        <TextView
+            android:id="@+id/tv_dd"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_gravity="center" />
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="请输入身份证信息" />
 
-        <com.mining.app.zxing.view.ViewfinderView
-            android:id="@+id/viewfinder_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_dd"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/customer_item_blue_1"
+            android:digits="0123456789xX"
+            android:hint="输入您的身份证号"
+            android:inputType="numberSigned"
+            android:maxEms="12"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_text"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/darkslategrey"
+                android:padding="10dp"
+                android:text="清空"
+                android:textColor="@color/gray" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/springgreen"
+                android:padding="10dp"
+                android:text="提交"
+                android:textColor="@color/gray" />
+        </LinearLayout>
 
         <RelativeLayout
             android:id="@+id/capture_bottom"
@@ -79,6 +120,7 @@
             android:layout_alignParentBottom="true" >
 
             <Button
+                android:id="@+id/btn_message"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -87,12 +129,12 @@
                 android:background="@drawable/item_press_selector"
                 android:drawablePadding="5dp"
                 android:drawableTop="@drawable/mingdanqiandao"
-                android:onClick="onPersonCardAction"
                 android:padding="5dp"
-                android:text="身份证检票" >
+                android:text="短信检票" >
             </Button>
 
             <Button
+                android:id="@+id/btn_qrcode"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -100,10 +142,9 @@
                 android:layout_marginRight="50dp"
                 android:background="@drawable/item_press_selector"
                 android:drawablePadding="5dp"
-                android:drawableTop="@drawable/mail"
-                android:onClick="onMessageAction"
+                android:drawableTop="@drawable/shaomiaoqiandao"
                 android:padding="5dp"
-                android:text="短信检票" >
+                android:text="条码检票" >
             </Button>
         </RelativeLayout>
     </RelativeLayout>

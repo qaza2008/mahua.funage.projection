@@ -19,6 +19,7 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -239,7 +240,9 @@ public class FunctionActivity extends BaseActivity {
 	@AfterViews
 	void initView() {
 		// 剧目名称和时间
-		tv_name.setText(myApplication.getDrama_name());
+		String nameString = myApplication.getDrama_name();
+
+		tv_name.setText(Html.fromHtml(nameString));
 		tv_time.setText(DateTimeUtils.getTotalDayTime(Long.parseLong(myApplication.getStart_time())));
 		Reflesh(null);
 		
@@ -333,6 +336,12 @@ public class FunctionActivity extends BaseActivity {
 		// OrderActivity_.class);
 		// startActivity(intent);
 		
+	}
+	
+	@Click(R.id.onInputCard)
+	void onInputCard(View view){
+		Intent intent = new Intent(this, InputCardActivity_.class);
+		startActivity(intent);	
 	}
 	
 	private void updateInfo(People people) {

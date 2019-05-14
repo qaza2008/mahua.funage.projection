@@ -74,7 +74,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:ellipsize="end"
             android:paddingLeft="10dp"
             android:singleLine="true"
             android:text="测试演出"
@@ -178,6 +177,21 @@
             android:textSize="20sp" >
         </Button>
 
+        <Button
+            android:id="@+id/onInputCard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/item_press_selector"
+            android:drawableLeft="@drawable/mingdanqiandao"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/dai1"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="身份证手动检票"
+            android:textSize="20sp" >
+        </Button>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -244,8 +258,8 @@
                 style="?android:attr/progressBarStyleLarge"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginRight="2dp"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="2dp"
                 android:layout_toLeftOf="@+id/tb" />
         </RelativeLayout>
     </LinearLayout>

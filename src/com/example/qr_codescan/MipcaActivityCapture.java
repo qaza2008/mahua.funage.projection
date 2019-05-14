@@ -23,6 +23,7 @@ import android.widget.Toast;
 
 import com.example.mahua.funage.projection.BaseActivity;
 import com.example.mahua.funage.projection.FunctionActivity_;
+import com.example.mahua.funage.projection.InputCardActivity_;
 import com.example.mahua.funage.projection.MessageActivity_;
 import com.example.mahua.funage.projection.OrderActivity_;
 import com.example.mahua.funage.projection.R;
@@ -277,7 +278,11 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
 	 * </pre>
 	 */
 	public void Return(View view) {
-		onPersonCardAction(null);
+//		onPersonCardAction(null);
+		Intent intent = new Intent();
+		intent.setClass(this, FunctionActivity_.class);
+		startActivity(intent);
+		finish();
 	}
 	
 	/**
@@ -295,7 +300,7 @@ public class MipcaActivityCapture extends BaseActivity implements Callback {
 	}
 	
 	public void onPersonCardAction(View view) {
-		Intent intent = new Intent(this, FunctionActivity_.class);
+		Intent intent = new Intent(this, InputCardActivity_.class);
 		startActivity(intent);
 		finish();
 	}

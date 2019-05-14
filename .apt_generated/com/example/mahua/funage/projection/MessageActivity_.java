@@ -85,9 +85,39 @@ public final class MessageActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
+        btn_clear = ((Button) hasViews.findViewById(id.btn_clear));
         et_text = ((EditText) hasViews.findViewById(id.et_text));
         btn_submit = ((Button) hasViews.findViewById(id.btn_submit));
-        btn_clear = ((Button) hasViews.findViewById(id.btn_clear));
+        {
+            View view = hasViews.findViewById(id.btn_qrcode);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MessageActivity_.this.onMipcaAction();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.btn_input_pd);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MessageActivity_.this.onPersonCardAction();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = hasViews.findViewById(id.btn_clear);
             if (view!= null) {
@@ -112,36 +142,6 @@ public final class MessageActivity_
                     @Override
                     public void onClick(View view) {
                         MessageActivity_.this.btnSubmitClick();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.btn_qrcode);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MessageActivity_.this.onMipcaAction();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.btn_personcard);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MessageActivity_.this.onPersonCardAction();
                     }
 
                 }

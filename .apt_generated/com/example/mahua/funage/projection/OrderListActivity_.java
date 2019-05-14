@@ -76,8 +76,8 @@ public final class OrderListActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        lv_orderDetail = ((ListView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.lv_orderDetail));
         tv_no_data = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_no_data));
+        lv_orderDetail = ((ListView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.lv_orderDetail));
         {
             AdapterView<?> view = ((AdapterView<?> ) hasViews.findViewById(com.example.mahua.funage.projection.R.id.lv_orderDetail));
             if (view!= null) {

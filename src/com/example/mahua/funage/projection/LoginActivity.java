@@ -124,8 +124,20 @@ public class LoginActivity extends BaseActivity {
 			sb.append("H4F6R14321002222");
 		}
 		// -----
-		initPadValidate(sb.toString());
+		// initPadValidate(sb.toString());
 		// updateVersion() ;
+		initPhone();
+	}
+	
+	private void initPhone() {
+		updateVersion();
+		// 有效的pad
+		// 请求城市
+		try {
+			doPostRequest(ItemType.city);
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	UpdateManager updateManager;

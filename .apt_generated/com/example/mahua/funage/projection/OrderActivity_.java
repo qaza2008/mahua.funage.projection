@@ -79,16 +79,16 @@ public final class OrderActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tv_name = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_name));
-        tv_drama_name = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_drama_name));
-        lv_orderDetail = ((ListView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.lv_orderDetail));
-        ll_data = ((LinearLayout) hasViews.findViewById(com.example.mahua.funage.projection.R.id.ll_data));
-        tv_address = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_address));
-        ll_submit = ((LinearLayout) hasViews.findViewById(com.example.mahua.funage.projection.R.id.ll_submit));
         tv_no_data = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_no_data));
-        tv_submit = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_submit));
         tv_phone = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_phone));
         tv_drama_time = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_drama_time));
+        tv_address = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_address));
+        ll_submit = ((LinearLayout) hasViews.findViewById(com.example.mahua.funage.projection.R.id.ll_submit));
+        tv_name = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_name));
+        tv_submit = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_submit));
+        ll_data = ((LinearLayout) hasViews.findViewById(com.example.mahua.funage.projection.R.id.ll_data));
+        lv_orderDetail = ((ListView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.lv_orderDetail));
+        tv_drama_name = ((TextView) hasViews.findViewById(com.example.mahua.funage.projection.R.id.tv_drama_name));
         {
             View view = hasViews.findViewById(com.example.mahua.funage.projection.R.id.ll_submit);
             if (view!= null) {

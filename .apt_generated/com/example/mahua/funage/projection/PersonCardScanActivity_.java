@@ -73,21 +73,21 @@ public final class PersonCardScanActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        moduleView = ((TextView) hasViews.findViewById(id.module));
-        sfz_sex = ((TextView) hasViews.findViewById(id.sfz_sex));
-        resultInfo = ((TextView) hasViews.findViewById(id.resultInfo2));
-        sfz_id = ((TextView) hasViews.findViewById(id.sfz_id));
-        read_button = ((Button) hasViews.findViewById(id.readCardButton));
-        sfz_mouth = ((TextView) hasViews.findViewById(id.sfz_mouth));
-        rfidNum = ((TextView) hasViews.findViewById(id.rfidNum));
+        sfz_nation = ((TextView) hasViews.findViewById(id.sfz_nation));
         sfz_year = ((TextView) hasViews.findViewById(id.sfz_year));
-        sfz_name = ((TextView) hasViews.findViewById(id.sfz_name));
-        back_button = ((Button) hasViews.findViewById(id.backButton));
-        sfz_day = ((TextView) hasViews.findViewById(id.sfz_day));
+        resultInfo = ((TextView) hasViews.findViewById(id.resultInfo2));
+        read_button = ((Button) hasViews.findViewById(id.readCardButton));
+        rfidNum = ((TextView) hasViews.findViewById(id.rfidNum));
+        sfz_sex = ((TextView) hasViews.findViewById(id.sfz_sex));
         sfz_address = ((TextView) hasViews.findViewById(id.sfz_address));
         stop_button = ((Button) hasViews.findViewById(id.stopReadCardButton));
-        sfz_nation = ((TextView) hasViews.findViewById(id.sfz_nation));
+        sfz_name = ((TextView) hasViews.findViewById(id.sfz_name));
+        sfz_id = ((TextView) hasViews.findViewById(id.sfz_id));
+        sfz_mouth = ((TextView) hasViews.findViewById(id.sfz_mouth));
         sfz_photo = ((ImageView) hasViews.findViewById(id.sfz_photo));
+        sfz_day = ((TextView) hasViews.findViewById(id.sfz_day));
+        back_button = ((Button) hasViews.findViewById(id.backButton));
+        moduleView = ((TextView) hasViews.findViewById(id.module));
         {
             View view = hasViews.findViewById(id.readCardButton);
             if (view!= null) {
@@ -104,21 +104,6 @@ public final class PersonCardScanActivity_
             }
         }
         {
-            View view = hasViews.findViewById(id.backButton);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        PersonCardScanActivity_.this.onBackBtnClick(view);
-                    }
-
-                }
-                );
-            }
-        }
-        {
             View view = hasViews.findViewById(id.stopReadCardButton);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
@@ -127,6 +112,21 @@ public final class PersonCardScanActivity_
                     @Override
                     public void onClick(View view) {
                         PersonCardScanActivity_.this.onStopBtnClick(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.backButton);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        PersonCardScanActivity_.this.onBackBtnClick(view);
                     }
 
                 }

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mahua.funage.projection"
-    android:versionCode="1003"
-    android:versionName="1.3" >
+    android:versionCode="1004"
+    android:versionName="1.4" >
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="17" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -98,6 +98,13 @@
             android:launchMode="standard"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.example.mahua.funage.projection.InputCardActivity_"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
         </activity>
         <activity
             android:name="com.example.qr_codescan.MipcaActivityCapture"

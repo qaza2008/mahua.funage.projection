@@ -18,8 +18,8 @@ import com.example.mahua.funage.utils.ToastUtils;
 import com.example.mahua.funage.utils.VolleyTools;
 import com.example.qr_codescan.MipcaActivityCapture;
 
-@EActivity(R.layout.activity_message)
-public class MessageActivity extends BaseActivity {
+@EActivity(R.layout.activity_input_pd)
+public class InputCardActivity extends BaseActivity {
 	
 	private final static int SCANNIN_GREQUEST_CODE = 1;
 	@ViewById
@@ -57,16 +57,27 @@ public class MessageActivity extends BaseActivity {
 	@Click(R.id.btn_submit)
 	void btnSubmitClick() {
 		if (TextUtils.isEmpty(et_text.getText().toString().trim())) {
-			ToastUtils.showShortToast(this, "请输入有效的验证码");
+			ToastUtils.showShortToast(this, "请输入有效的身份证");
 		} else {
+//			Intent intent = new Intent();
+//			intent.putExtra("no", et_text.getText().toString().trim());
+//			// 票的类型
+//			// 1：电子票
+//			// 2：身份证
+//			// 3：二维码取票
+//			intent.putExtra("type", "1");
+//			intent.setClass(this, OrderActivity_.class);
+//			startActivity(intent);
 			Intent intent = new Intent();
+//			intent.putExtra("no", people.getPeopleIDCode());
 			intent.putExtra("no", et_text.getText().toString().trim());
+//			intent.putExtra("no", "120120111111111111");
 			// 票的类型
 			// 1：电子票
 			// 2：身份证
 			// 3：二维码取票
-			intent.putExtra("type", "1");
-			intent.setClass(this, OrderActivity_.class);
+			intent.putExtra("type", "2");
+			intent.setClass(this, OrderListActivity_.class);
 			startActivity(intent);
 		}
 		
@@ -89,16 +100,16 @@ public class MessageActivity extends BaseActivity {
 	
 	public void Reflesh(View view) {
 		Intent intent = new Intent();
-		intent.setClass(this, MessageActivity_.class);
+		intent.setClass(this, InputCardActivity.class);
 		startActivity(intent);
 		finish();
 		
 	}
 	
-	@Click(R.id.btn_input_pd)
+	@Click(R.id.btn_message)
 	void onPersonCardAction(){
 		Intent intent = new Intent();
-		intent.setClass(this, InputCardActivity_.class);
+		intent.setClass(this, MessageActivity_.class);
 		startActivity(intent);
 		finish();
 	}

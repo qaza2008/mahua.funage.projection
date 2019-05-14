@@ -81,21 +81,21 @@ public final class FunctionActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        tb = ((ToggleButton) hasViews.findViewById(id.tb));
-        tv_time = ((TextView) hasViews.findViewById(id.tv_time));
         pb = ((ProgressBar) hasViews.findViewById(id.pb));
         tv_name = ((TextView) hasViews.findViewById(id.tv_name));
         progressBar1 = ((ProgressBar) hasViews.findViewById(id.progressBar1));
         tv_progress = ((TextView) hasViews.findViewById(id.tv_progress));
+        tb = ((ToggleButton) hasViews.findViewById(id.tb));
+        tv_time = ((TextView) hasViews.findViewById(id.tv_time));
         {
-            View view = hasViews.findViewById(id.onMessageScan);
+            View view = hasViews.findViewById(id.onInputCard);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        FunctionActivity_.this.onMessageScan(view);
+                        FunctionActivity_.this.onInputCard(view);
                     }
 
                 }
@@ -118,6 +118,21 @@ public final class FunctionActivity_
             }
         }
         {
+            View view = hasViews.findViewById(id.onMessageScan);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        FunctionActivity_.this.onMessageScan(view);
+                    }
+
+                }
+                );
+            }
+        }
+        {
             CompoundButton view = ((CompoundButton) hasViews.findViewById(id.tb));
             if (view!= null) {
                 view.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -132,8 +147,8 @@ public final class FunctionActivity_
                 );
             }
         }
-        init();
         initView();
+        init();
     }
 
     public static class IntentBuilder_ {

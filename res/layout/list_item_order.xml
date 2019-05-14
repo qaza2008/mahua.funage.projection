@@ -13,26 +13,30 @@
         android:background="@color/white"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/tv_sign"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/bg_sign_list"
-            android:drawablePadding="2dp"
-            android:drawableTop="@drawable/sigin_btn"
-            android:gravity="center_horizontal"
-            android:paddingTop="5dp"
-            android:text="签到"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="17sp"
-            android:visibility="visible" />
-
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/tv_sign" >
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bg_sign_list"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/sigin_btn"
+                android:gravity="center_horizontal"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+
+                android:text="签到"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
 
             <ImageView
                 android:id="@+id/iv_is_sign"

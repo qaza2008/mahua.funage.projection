@@ -9,23 +9,24 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.Spinner;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
-import com.example.mahua.funage.api.MyPrefs_;
-import com.example.mahua.funage.application.MyApplication_;
 import com.example.mahua.funage.projection.R.id;
 import com.example.mahua.funage.projection.R.layout;
-import com.example.mahua.funage.utils.AndroidUtil_;
-import com.example.mahua.funage.utils.VolleyTools_;
+import org.androidannotations.api.SdkVersionHelper;
 import org.androidannotations.api.view.HasViews;
 import org.androidannotations.api.view.OnViewChangedListener;
 import org.androidannotations.api.view.OnViewChangedNotifier;
 
-public final class LoginActivity_
-    extends LoginActivity
+public final class InputCardActivity_
+    extends InputCardActivity
     implements HasViews, OnViewChangedListener
 {
 
@@ -37,15 +38,11 @@ public final class LoginActivity_
         init_(savedInstanceState);
         super.onCreate(savedInstanceState);
         OnViewChangedNotifier.replaceNotifier(previousNotifier);
-        setContentView(layout.activity_login);
+        setContentView(layout.activity_input_pd);
     }
 
     private void init_(Bundle savedInstanceState) {
-        sp = new MyPrefs_(this);
         OnViewChangedNotifier.registerOnViewChangedListener(this);
-        myApplication = MyApplication_.getInstance();
-        androidUtil = AndroidUtil_.getInstance_(this);
-        volleyTools = VolleyTools_.getInstance_(this);
     }
 
     @Override
@@ -66,42 +63,114 @@ public final class LoginActivity_
         onViewChangedNotifier_.notifyViewChanged(this);
     }
 
-    public static LoginActivity_.IntentBuilder_ intent(Context context) {
-        return new LoginActivity_.IntentBuilder_(context);
+    public static InputCardActivity_.IntentBuilder_ intent(Context context) {
+        return new InputCardActivity_.IntentBuilder_(context);
     }
 
-    public static LoginActivity_.IntentBuilder_ intent(android.app.Fragment fragment) {
-        return new LoginActivity_.IntentBuilder_(fragment);
+    public static InputCardActivity_.IntentBuilder_ intent(android.app.Fragment fragment) {
+        return new InputCardActivity_.IntentBuilder_(fragment);
     }
 
-    public static LoginActivity_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
-        return new LoginActivity_.IntentBuilder_(supportFragment);
+    public static InputCardActivity_.IntentBuilder_ intent(android.support.v4.app.Fragment supportFragment) {
+        return new InputCardActivity_.IntentBuilder_(supportFragment);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (((SdkVersionHelper.getSdkInt()< 5)&&(keyCode == KeyEvent.KEYCODE_BACK))&&(event.getRepeatCount() == 0)) {
+            onBackPressed();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        spin_theater = ((Spinner) hasViews.findViewById(id.spin_theater));
-        spin_city = ((Spinner) hasViews.findViewById(id.spin_city));
-        tv_padvalidate = ((TextView) hasViews.findViewById(id.tv_padvalidate));
-        tv_padno = ((TextView) hasViews.findViewById(id.tv_padno));
-        spin_drama = ((Spinner) hasViews.findViewById(id.spin_drama));
-        tv_name = ((TextView) hasViews.findViewById(id.tv_name));
+        btn_clear = ((Button) hasViews.findViewById(id.btn_clear));
+        btn_submit = ((Button) hasViews.findViewById(id.btn_submit));
+        et_text = ((EditText) hasViews.findViewById(id.et_text));
         {
-            View view = hasViews.findViewById(id.bt_login);
+            View view = hasViews.findViewById(id.btn_submit);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        LoginActivity_.this.bt_login(view);
+                        InputCardActivity_.this.btnSubmitClick();
                     }
 
                 }
                 );
             }
         }
-        init();
+        {
+            View view = hasViews.findViewById(id.btn_qrcode);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        InputCardActivity_.this.onMipcaAction();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.btn_message);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        InputCardActivity_.this.onPersonCardAction();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.btn_clear);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        InputCardActivity_.this.btnClearClick();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            final TextView view = ((TextView) hasViews.findViewById(id.et_text));
+            if (view!= null) {
+                view.addTextChangedListener(new TextWatcher() {
+
+
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        InputCardActivity_.this.afterEditChange(s, view);
+                    }
+
+                }
+                );
+            }
+        }
     }
 
     public static class IntentBuilder_ {
@@ -113,26 +182,26 @@ public final class LoginActivity_
 
         public IntentBuilder_(Context context) {
             context_ = context;
-            intent_ = new Intent(context, LoginActivity_.class);
+            intent_ = new Intent(context, InputCardActivity_.class);
         }
 
         public IntentBuilder_(android.app.Fragment fragment) {
             fragment_ = fragment;
             context_ = fragment.getActivity();
-            intent_ = new Intent(context_, LoginActivity_.class);
+            intent_ = new Intent(context_, InputCardActivity_.class);
         }
 
         public IntentBuilder_(android.support.v4.app.Fragment fragment) {
             fragmentSupport_ = fragment;
             context_ = fragment.getActivity();
-            intent_ = new Intent(context_, LoginActivity_.class);
+            intent_ = new Intent(context_, InputCardActivity_.class);
         }
 
         public Intent get() {
             return intent_;
         }
 
-        public LoginActivity_.IntentBuilder_ flags(int flags) {
+        public InputCardActivity_.IntentBuilder_ flags(int flags) {
             intent_.setFlags(flags);
             return this;
         }
